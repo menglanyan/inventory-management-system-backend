@@ -12,7 +12,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Response> handleAllExceptions(Exception ex) {
         Response response = Response.builder()
-                .status(HttpStatus.INTERNAL_SERVER_ERROR.value())    // 500
+                .statusCode(HttpStatus.INTERNAL_SERVER_ERROR.value())    // 500
                 .message(ex.getMessage())
                 .build();
 
@@ -22,7 +22,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(NotFoundException.class)
     public ResponseEntity<Response> handleNotFoundException(Exception ex) {
         Response response = Response.builder()
-                .status(HttpStatus.NOT_FOUND.value())    // 404
+                .statusCode(HttpStatus.NOT_FOUND.value())    // 404
                 .message(ex.getMessage())
                 .build();
 
@@ -32,7 +32,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(NameValueRequiredException.class)
     public ResponseEntity<Response> handleNameValueRequiredException(Exception ex) {
         Response response = Response.builder()
-                .status(HttpStatus.BAD_REQUEST.value())    // 400
+                .statusCode(HttpStatus.BAD_REQUEST.value())    // 400
                 .message(ex.getMessage())
                 .build();
 
@@ -42,7 +42,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(InvalidCredentialsException.class)
     public ResponseEntity<Response> handldInvalidCredentialsException(Exception ex) {
         Response response = Response.builder()
-                .status(HttpStatus.BAD_REQUEST.value())    // 400
+                .statusCode(HttpStatus.BAD_REQUEST.value())    // 400
                 .message(ex.getMessage())
                 .build();
 

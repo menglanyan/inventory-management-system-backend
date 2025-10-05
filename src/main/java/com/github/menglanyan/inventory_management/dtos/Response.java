@@ -14,7 +14,7 @@ import java.util.List;
 public class Response {
 
     // Generic
-    private int status;
+    private int statusCode;
 
     private String message;
 
