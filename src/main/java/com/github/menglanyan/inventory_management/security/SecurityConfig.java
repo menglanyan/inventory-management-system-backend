@@ -41,7 +41,7 @@ public class SecurityConfig {
                         ex.accessDeniedHandler(customAccessDenialHandler)
                                 .authenticationEntryPoint(customAuthenticationEntryPoint))
                 .authorizeHttpRequests(req ->
-                        req.requestMatchers("api/auth/**").permitAll()
+                        req.requestMatchers("/api/auth/**").permitAll()
                                 .anyRequest().authenticated())
                 .sessionManagement(mag ->
                         mag.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
