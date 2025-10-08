@@ -4,7 +4,6 @@ import com.github.menglanyan.inventory_management.dtos.LoginRequest;
 import com.github.menglanyan.inventory_management.dtos.RegisterRequest;
 import com.github.menglanyan.inventory_management.dtos.Response;
 import com.github.menglanyan.inventory_management.services.AuthService;
-import com.github.menglanyan.inventory_management.services.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
